@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Play tic tac toe!">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/e874c4d243.js" crossorigin="anonymous"></script>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <header>
+        <h1>Tic Tac Toe</h1>
+        <p><a href="https://www.linkedin.com/in/benjamin-martinis-863350272/" target="_blank" me-4 text-reset">Benjamin Martinis <i class="fab fa-linkedin"></i></a></p>
+    </header>
+    <main>
+        <div class="inner-board">
+            <div class="start-menu">
+                <h4>Select Game Mode:</h4>
+                <div class="container">
+                    <p class="one-player">One Player</p>
+                    <p class="two-player">Two Player</p>
+                </div>
+            </div>
+            <div class="game-board">
+                <div class="board">
+                    <div class="cell" id="1" onClick="clicked(this.id)" data-cell></div>
+                    <div class="cell" id="2" onClick="clicked(this.id)" data-cell></div>
+                    <div class="cell" id="3" onClick="clicked(this.id)" data-cell></div>
+                    <div class="cell" id="4" onClick="clicked(this.id)" data-cell></div>
+                    <div class="cell" id="5" onClick="clicked(this.id)" data-cell></div>
+                    <div class="cell" id="6" onClick="clicked(this.id)" data-cell></div>
+                    <div class="cell" id="7" onClick="clicked(this.id)" data-cell></div>
+                    <div class="cell" id="8" onClick="clicked(this.id)" data-cell></div>
+                    <div class="cell" id="9" onClick="clicked(this.id)" data-cell></div>
+                </div>
+                <div class="controls">
+                    <p class="turn">Player X Turn</p>
+                    <p class="reset" onClick="restart()">Reset</p>
+                </div>
+            </div>
+            <div class="winner"></div>
+            <div class="draw"></div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

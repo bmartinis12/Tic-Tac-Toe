@@ -1,0 +1,239 @@
+/* Reset browser css */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Body */
+
+body {
+    background-color: #E0E0E0;
+    color: #263238;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/* Header */
+
+header {
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 30px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header p {
+    text-align: center;
+    font-size: 18px;
+}
+
+header i {
+    color: #0A66C2;
+}
+
+/* main */
+
+main {
+    width: 48vw;
+    height: 45vh;
+    padding: 2%;
+    margin: 15vh auto;
+    background-color: #006064;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-board {
+    background-color: #FAFAFA;
+    width: 95%;
+    height: 95%;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Starting Menu */
+
+.start-menu {
+    width: 100%;
+    height: 100%;
+}
+
+.start-menu h4 {
+    font-size: 20px;
+    text-align: center;
+    margin: 30px;
+    margin-bottom: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container p:hover {
+    cursor: pointer;
+    color: #FAFAFA;
+    background-color: #006064;
+    border: 1px solid #006064;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* game-board */
+
+.game-board {
+    display: none;
+    width: 95%;
+    height: 95%;
+    flex-direction: column;
+}
+
+.board {
+    width: 90%;
+    height: 85%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3, auto);
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3) {
+	border-top: none;
+}
+
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+	border-left: none;
+}
+
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9) {
+	border-right: none;
+    border-left: none;
+}
+
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9) {
+	border-bottom: none;
+    border-top: none;
+}
+
+.controls {
+    margin: 5px auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.reset {
+    cursor: pointer;
+}
+
+/* winner display */
+
+.winner, .draw {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.winner h4, .draw h4 {
+    font-size: 20px;
+}
+
+.winner p, .draw p {
+    font-size: 18px;
+    cursor: pointer;
+    color: #FAFAFA;
+    background-color: #006064;
+    border: 1px solid #006064;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Media queries */
+
+@media (max-width: 43.7em){
+    main {
+        width: 75vw;
+        height: 60vh;
+    }
+}
+
+@media (max-width: 23.45em){
+    main {
+        width: 80vw;
+        height: 60vh;
+    }
+
+    .controls {
+        font-size: 12px;
+    }
+}
+
+
+
